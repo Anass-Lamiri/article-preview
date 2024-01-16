@@ -63,7 +63,7 @@
     
     background-color: #ffffff;
     box-shadow: 6px 6px 64px 0px rgba(158, 175, 194, 0.25);
-    overflow: hidden;
+    /* overflow: hidden; */
 
     margin: 0 32px;
 }
@@ -166,7 +166,15 @@
     letter-spacing: 0.234px;
 }
 
-.container .right .author .share {
+/* share_wrap */
+
+.container .right .author .share_wrap {
+    position: relative;
+    cursor: pointer;
+}
+
+.container .right .author .share_wrap .share {
+    /* position: relative; */
     width: 35px;
     height: 35px;
     background-color: var(--Light-Grayish-Blue);
@@ -175,6 +183,57 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    cursor: pointer;
+}
+
+.container .right .author .share_wrap:hover .share_info {
+    display: flex;
+}
+
+.container .right .author .share_wrap .share_info {
+    display: none;
+    position: absolute;
+    top: -84px;
+    right: -100px;
+
+    width: 248px;
+    height: 55px;
+
+    background-color: var(--Very-Dark-Grayish-Blue);
+
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    border-radius: 8px;
+}
+
+.triangle {
+    position: absolute;
+    bottom: -2px;
+
+    width: 28px;
+    height: 14px;
+
+    background-color: var(--Very-Dark-Grayish-Blue);
+    transform: rotate(45deg);
+    
+}
+
+.container .right .author .share_wrap .share_info .share_info-text {
+    color: var(--Grayish-Blue);
+    font-size: 13px;
+    font-weight: var(--bold-weight);
+    line-height: 20px; /* 153.846% */
+    letter-spacing: 4.68px;
+}
+
+.container .right .author .share_wrap .share_info .share_info-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 
