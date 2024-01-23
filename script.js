@@ -4,35 +4,24 @@ const share = document.querySelector('.share_wrap');
 
 
 window.addEventListener('load', () => {
-
-    if (window.innerWidth < 732) {
-        share.addEventListener('mouseover', (e) => {
-            shareInfo.classList.add('flex')
-        })
-        share.addEventListener('mouseout', (e) => {
-            shareInfo.classList.remove('flex')
-        })
-    
-    }
+    shareHover()
 })
 
 window.addEventListener('resize', () => {
-
-    if (window.innerWidth < 732) {
-        console.log(window.innerWidth);
-        share.addEventListener('mouseover', (e) => {
-            shareInfo.classList.add('flex')
-        })
-        share.addEventListener('mouseout', (e) => {
-            shareInfo.classList.remove('flex')
-        })
-    
-    }else {
-        return
-    }
+    shareHover()
 })
 
 
 
+function shareHover() {
 
+    share.addEventListener('mouseover', () => {
+        if (window.innerWidth < 860) {
+            shareInfo.classList.add('flex')
+        }
+    })
+    share.addEventListener('mouseout', () => {
+        shareInfo.classList.remove('flex')
+    })
+}
 

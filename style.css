@@ -55,7 +55,6 @@
     max-width: 731px;
     min-height: 280px;
     border-radius: 8px;
-    margin: auto;
     
     display: flex;
     flex-direction: row;
@@ -63,16 +62,16 @@
     
     background-color: #ffffff;
     box-shadow: 6px 6px 64px 0px rgba(158, 175, 194, 0.25);
-    /* overflow: hidden; */
 
-    margin: 0 32px;
+    margin: 0 20px;
 }
 
-@media (max-width: 732px) {
+@media (max-width: 860px) {
     .wrap .container {
         position: relative;
         flex-wrap: wrap;
         gap: 0;
+        max-width: 327px;
     }
 }
 
@@ -91,7 +90,7 @@
     border-radius: 8px 0 0 8px;
 }
 
-@media (max-width: 732px) {
+@media (max-width: 860px) {
     .wrap .container .left {
         width: 327px;
         min-width: 100%;
@@ -113,7 +112,7 @@
 
 /* Start right */
 
-@media (max-width: 732px) {
+@media (max-width: 860px) {
     .wrap .container .right {
         padding: 36px 21px 20px 32px;
     }
@@ -219,7 +218,7 @@
     
     cursor: pointer;
 }
-@media (max-width: 732px) {
+@media (max-width: 860px) {
     .wrap .container .right .author .share_wrap:hover .share {
         position: relative;
         z-index: 10;
